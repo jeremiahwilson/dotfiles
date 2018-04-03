@@ -1,0 +1,7 @@
+[user]
+	name = Jeremiah Wilson
+	email = jeremiah.james.wilson@gmail.com
+[color]
+	ui = auto
+[core]
+	editor = vim
