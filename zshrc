@@ -20,6 +20,12 @@ alias mupdf='mupdf-gl' # Necessary for mupdf to run
 plugins=(
   git
   brew
+  osx
+  python
+  tmux
+  vi-mode
+  web-search
+  wd
 )
 
 source $ZSH/oh-my-zsh.sh
