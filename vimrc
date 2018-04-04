@@ -18,8 +18,9 @@ Plugin 'lervag/vimtex' " vimtex
 Plugin 'scrooloose/syntastic' " Syntastic
 " Plugin 'ying17zi/vim-live-latex-preview' " https://lukesmith.xyz/latex
 
-" Plugin Keybinds
+" Plugin Config
 map <C-n> :NERDTreeToggle<CR> 
+let g:vimtex_view_method = 'skim' " use Skim for LaTeX
 
 " Finish Vundle Stuff 
 call vundle#end() " required
@@ -34,7 +35,6 @@ if has("gui_running")
 endif
 colorscheme gruvbox
 let g:airline_theme='gruvbox' " theme of status bar (airline plugin)
-let g:vimtex_view_method = 'skim' " use Skim for LaTeX
 
 " Spaces and Tabs 
 set tabstop=4 " number of visual spaces per tab
