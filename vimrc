@@ -37,6 +37,9 @@ colorscheme gruvbox
 let g:airline_theme='gruvbox' " theme of status bar (airline plugin)
 
 " Spaces and Tabs 
+filetype indent on
+set shiftwidth=4 " autoindents are the same length as tab
+set autoindent " auto indents based on code when possible
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
