@@ -15,8 +15,10 @@ COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion
 
 # Aliases
 alias mupdf='mupdf-gl' # Necessary for mupdf to run
+alias vi='vim'
+alias vim='mvim'
 # alias mvim='mvim --servername LATEX' # because I only use GUI vim for latex and clientserver is required for bibtex
-md () { mkdir -p "$@" && cd "$1"; } # adds command md that creates a directory and cd's to it
+# md () { mkdir -p "$@" && cd "$1"; } # adds command md that creates a directory and cd's to it (this doesnt work)
 
 # Plugins
 plugins=(
