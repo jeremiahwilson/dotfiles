@@ -16,6 +16,13 @@ COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion
 # Aliases
 alias mupdf='mupdf-gl' # Necessary for mupdf to run
 alias gvim='mvim'
+
+# Functions
+mkcd () { # Makes a directory and changes to it
+  mkdir "$1"
+  cd "$1"
+}
+
 # Plugins
 plugins=(
   git
@@ -27,12 +34,6 @@ plugins=(
   web-search
   wd
 )
-
-# Other functions
-mkcd () { # Makes a directory and changes to it
-  mkdir "$1"
-  cd "$1"
-}
 
 source $ZSH/oh-my-zsh.sh
 
