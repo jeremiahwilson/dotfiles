@@ -11,8 +11,8 @@ call vundle#begin() " initialize
 " Plugins Themselves
 Plugin 'VundleVim/Vundle.vim' " let Vundle manage Vundle (required)
 Plugin 'scrooloose/nerdtree' " The NERD Tree https://vimawesome.com/plugin/nerdtree-red
-Plugin 'bling/vim-airline' " vim-ariline https://vimawesome.com/plugin/vim-airline
-Plugin 'vim-airline/vim-airline-themes' " vim-airline themes 
+" Plugin 'bling/vim-airline' " vim-ariline https://vimawesome.com/plugin/vim-airline
+" Plugin 'vim-airline/vim-airline-themes' " vim-airline themes 
 Plugin 'morhetz/gruvbox' " gruvbox theme
 Plugin 'lervag/vimtex' " vimtex
 Plugin 'scrooloose/syntastic' " Syntastic
@@ -27,13 +27,15 @@ call vundle#end() " required
 filetype plugin indent on "requireed
 " Finish Plugins
 
-" Colors 
+" Colors/Appearance 
 syntax enable " syntax coloring
 set background=dark " theme of colorscheme
+colorscheme gruvbox
+set guifont=Hack:h12
 if has("gui_running")
         set background=light " light background in GUI only
+        "colorscheme nofrils-sepia
 endif
-colorscheme gruvbox
 let g:airline_theme='gruvbox' " theme of status bar (airline plugin)
 
 " Spaces and Tabs 
