@@ -30,6 +30,7 @@ filetype plugin indent on "requireed
 " Colors/Appearance 
 syntax enable " syntax coloring
 set background=dark " theme of colorscheme
+set wrap lbr " words that go to a new line are entirely moved to the new line
 colorscheme gruvbox
 set guifont=Hack:h12
 if has("gui_running")
@@ -45,6 +46,11 @@ set autoindent " auto indents based on code when possible
 set tabstop=4 " number of visual spaces per tab
 set softtabstop=4 " number of spaces in tab when editing
 set expandtab " tabs are spaces
+
+" Keybinds
+" Makes j and k work for long lines that take up two physical lines
+noremap  <buffer> <silent> k gk
+noremap  <buffer> <silent> j gj
 
 " UI 
 filetype indent on " load filetype specific indent files located in ~/.vim/indent/
