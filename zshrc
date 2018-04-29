@@ -17,12 +17,6 @@ COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion
 alias mupdf='mupdf-gl' # Necessary for mupdf to run
 alias gvim='mvim'
 
-# Functions
-mkcd () { # Makes a directory and changes to it
-  mkdir "$1"
-  cd "$1"
-}
-
 # Plugins
 plugins=(
   git
