@@ -35,7 +35,7 @@ colorscheme gruvbox
 set guifont=Hack:h12
 if has("gui_running")
         set background=light " light background in GUI only
-        "colorscheme nofrils-sepia
+        colorscheme solarized
 endif
 let g:airline_theme='gruvbox' " theme of status bar (airline plugin)
 
