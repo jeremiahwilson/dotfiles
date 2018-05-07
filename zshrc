@@ -9,7 +9,8 @@ export UPDATE_ZSH_DAYS=7 # Update every 7 days
 export EDITOR='vim'
 
 # Appearance
-ZSH_THEME="jnrowe"
+#ZSH_THEME="jnrowe"
+ZSH_THEME="arrow"
 export TERM=screen-256color # Adds 256 color support for tmux
 COMPLETION_WAITING_DOTS="true" # Display red dots while waiting for completion
 
