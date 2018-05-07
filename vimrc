@@ -29,7 +29,7 @@ filetype plugin indent on "requireed
 
 " Colors/Appearance 
 syntax enable " syntax coloring
-set background=dark " theme of colorscheme
+set background=light " theme of colorscheme
 set wrap lbr " words that go to a new line are entirely moved to the new line
 colorscheme gruvbox
 set guifont=Hack:h12
