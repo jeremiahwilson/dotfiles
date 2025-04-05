@@ -28,10 +28,10 @@ return {
             lspconfig.html.setup({})
             vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, {})
             vim.keymap.set('n', 'gd', vim.lsp.buf.definition, {})
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+            vim.keymap.set('n', 'H', vim.lsp.buf.hover, {})
             vim.keymap.set('n', '<leader>ca', vim.lsp.buf.code_action, {})
             vim.keymap.set('n', '<leader>f', vim.cmd.EslintFixAll, {})
-            vim.keymap.set('n', '<leader>K', vim.diagnostic.open_float, {})
+            vim.keymap.set('n', '<leader>H', vim.diagnostic.open_float, {})
         end
     }
 }
