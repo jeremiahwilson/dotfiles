@@ -1,0 +1,9 @@
+# https://ghostty.org/docs/config/reference
+
+theme="gruvbox-dark"
+macos-icon="blueprint"
+macos-titlebar-proxy-icon="hidden"
+macos-titlebar-style="tabs"
+
+confirm-close-surface=false
+keybind = super+w=close_tab
