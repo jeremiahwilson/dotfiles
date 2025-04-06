@@ -53,7 +53,9 @@ vim.opt.scrolloff = 35
 -- instead raise a dialog asking if you wish to save the current file(s)
 vim.opt.confirm = true
 
+-- intdenting
 vim.opt.expandtab = true
 vim.opt.tabstop = 2
 vim.opt.softtabstop = 2
 vim.opt.shiftwidth = 2
+vim.opt.breakindent = true -- makes indents behave right when a line wraps

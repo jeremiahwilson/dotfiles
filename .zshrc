@@ -15,6 +15,20 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
+# function to define CD behavior with ranger 
+function ranger-cd {
+    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
+    ranger --choosedir="$temp_file" "$@"
+    if [ -f "$temp_file" ] && [ "$(cat -- "$temp_file")" != "$(pwd)" ]; then
+        cd -- "$(cat "$temp_file")"
+    fi
+    rm -f -- "$temp_file"
+}
+
+# Then create an alias if you want
+alias rcd='ranger-cd'
+
+
 # plugins
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-syntax-highlighting
@@ -26,6 +40,7 @@ autoload -U compinit %% compinit # load the completions
 export XDG_CONFIG_HOME="$HOME/.config"
 alias vim='nvim'
 alias ls='ls --color'
+alias rcd='ranger-cd'
 EDITOR='nvim'
 
 # command history
