@@ -18,3 +18,6 @@ Before you do that, you'll need to delete or rename the original file in your ho
 **nvm** setup in .zshrc \
 **ripgrep** required for telescope.nvim \
 **zoxide** and **fzf** required for some zsh plugins.
+
+All this for yazi, some already installed above. \
+brew install yazi ffmpegthumbnailer ffmpeg sevenzip jq poppler fd ripgrep fzf zoxide imagemagick font-symbols-only-nerd-font

@@ -15,20 +15,6 @@ fi
 # source/load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# function to define CD behavior with ranger 
-function ranger-cd {
-    temp_file="$(mktemp -t "ranger_cd.XXXXXXXXXX")"
-    ranger --choosedir="$temp_file" "$@"
-    if [ -f "$temp_file" ] && [ "$(cat -- "$temp_file")" != "$(pwd)" ]; then
-        cd -- "$(cat "$temp_file")"
-    fi
-    rm -f -- "$temp_file"
-}
-
-# Then create an alias if you want
-alias rcd='ranger-cd'
-
-
 # plugins
 zinit light Aloxaf/fzf-tab
 zinit light zsh-users/zsh-syntax-highlighting
@@ -40,7 +26,6 @@ autoload -U compinit %% compinit # load the completions
 export XDG_CONFIG_HOME="$HOME/.config"
 alias vim='nvim'
 alias ls='ls --color'
-alias rcd='ranger-cd'
 EDITOR='nvim'
 
 # command history
@@ -65,6 +50,16 @@ bindkey '^K' history-search-forward # ditto but forward
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}" # color autocomplete
 zstyle ':completion:*' menu no # not needed with fzf-tab plugin
 zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath' # preview window for fzftab 
+
+# yazi
+function y() {
+	local tmp="$(mktemp -t "yazi-cwd.XXXXXX")" cwd
+	yazi "$@" --cwd-file="$tmp"
+	if cwd="$(command cat -- "$tmp")" && [ -n "$cwd" ] && [ "$cwd" != "$PWD" ]; then
+		builtin cd -- "$cwd"
+	fi
+	rm -f -- "$tmp"
+}
 
 # Evals
 eval "$(fzf --zsh)"

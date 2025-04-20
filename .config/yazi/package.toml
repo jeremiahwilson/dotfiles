@@ -1,0 +1,7 @@
+[plugin]
+deps = []
+
+[[flavor.deps]]
+use = "gmvar/gruvbox-dark"
+rev = "2a2bd50"
+hash = "8538c8db6d36bcca995afbc96ea7acb5"
